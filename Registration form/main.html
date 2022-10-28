@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <marquee><b>Welcome Users</b> </marquee>
+    <marquee>
+        <hr color="red">  IMPORTANT UPDATE 
+        <hr color="red"> Last days to register!</marquee>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onformSubmit();" autocomplete="off">
+                    <div>
+                        <label><b>Full Name:</b></label><label class="validation-error hide" id="fullNameValidationError">Let's see</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div>
+                        <label><b>Mobile Number:</b> </label>
+                        <input type="text" name="telefone" id="telefone" maxlength="18" onkeypress="mascara(this)">
+                    </div>
+                    <div>
+                        <label><b>Gender:</b> </label>
+                        <select id="Sexo">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label><b>City Name:</b></label>
+                        <input type="text" name="Cidade" id="cidade">
+                    </div>
+                    <div>
+                        <label><b>E-mail ID:</b></label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <h2><strong><u>Entry Records Details:</u></strong></h2>
+                        </tr>
+                        <tr>
+                            <th>Name</th>
+                            <th>Mobile</th>
+                            <th>Gender</th>
+                            <th>City</th>
+                            <th>E-mail</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
